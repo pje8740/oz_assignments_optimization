@@ -22,9 +22,9 @@ const App = () => {
     );
   }, [items, searchTerm]);
 
-  const handleItemClick = (item) => {
+  const handleItemClick = useCallback((item) => {
     setSelectedItem(item);
-  };
+  }, []);
 
   return (
     <div className="app-wrapper">
